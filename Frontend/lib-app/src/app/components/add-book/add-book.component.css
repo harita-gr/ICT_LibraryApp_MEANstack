@@ -1,0 +1,16 @@
+
+  h1{
+    font-family: 'Bad Script', cursive;
+    font-size: 55px;
+    color: white;
+  }
+
+.container{
+    background-color: white;
+    width:40vw;
+}
+
+h3{
+    font-family: 'Bad Script', cursive;
+    padding:10px;
+}

@@ -1,0 +1,37 @@
+<div class="masthead">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Books
+          <p class="lead"></p>
+        </h1>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel-form3">
+          <div class="panel-body">
+            <div class="form-body">
+                <div class="card-header">
+                    <h3>Add new Book</h3>
+                </div>
+                <form (ngSubmit)="addBook()" >
+                    <label> Book Title: </label><br>
+                    <input type="text" id="title" placeholder="Enter author name.." class="form-control" name="title" [(ngModel)]="book.title">
+                    <span id="atitle_err"></span><br>
+                    <label> Author Name: </label><br>
+                    <input type="text" id="name" placeholder="Enter author name.." class="form-control" name="author" [(ngModel)]="book.author">
+                    <span id="aname_err"></span><br>
+                    <label> Genre: </label><br>
+                    <input type="text" id="genre" placeholder="Enter the genre.." class="form-control" name="genre" [(ngModel)]="book.genre">
+                    <span id="agenre_err"></span><br>
+                    <label> Upload Image: </label><br>
+                    <input type="file" id="file" name="image" [(ngModel)]="book.image">
+                    <span id="aimg_err"></span><br><br>
+                    <input type="submit" value="Add Book" class="btn btn-dark">
+                   </form>
+                 </div> 

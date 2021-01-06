@@ -1,0 +1,49 @@
+<div class="masthead">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Authors
+          <p class="lead"></p>
+        </h1>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel-form3">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            
+             <div class="form-body">
+              <h3> Update Author</h3> <br>
+              <form (ngSubmit)="editAuthor()">
+  
+             <label> Name: </label><br>
+             <input type="text" id="name" [value]="author.name" class="form-control" name="name"  [(ngModel)]="author.name"> 
+             <span id="aname_err"></span><br>
+             <label> Genre: </label><br>
+             <input type="text" id="genre" value="{{author.genre}}" class="form-control" name="genre" [(ngModel)]="author.genre">
+             <span id="agenre_err"></span><br>
+             <label> Books: </label><br>
+             <input type="text" id="books" value="{{author.book}}" class="form-control" name="books" [(ngModel)]="author.book">
+             <span id="abook_err"></span><br>
+             <label> Change Image: </label><br>
+             <input type="file" id="file" name="image"> <br>
+             <img src="" style="width:100px;height: 100px;" >
+             <span id="aimg_err"></span><br> <br>
+             <input type="submit" value="Update Author" class="btn btn-dark"> 
+            </form>
+          </div>      
+            <!--/stories-->        
+            
+          </div>
+        </div>
+    </div>
+</div>
+</div>

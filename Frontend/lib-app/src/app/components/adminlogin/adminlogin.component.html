@@ -1,0 +1,32 @@
+<div class="masthead">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Good Reads
+          <p class="lead"></p>
+        </h1>
+      </div>
+  </div>
+</div>
+
+<div class="form-body">
+      <div class="card-header">
+        <h3> Welcome Admin!</h3>
+      </div>
+
+      <div class="card-body">
+          <form class="form col-md-6" #userlogin="ngForm" (ngSubmit)="validateUser()">
+          <div class="form-group">
+            <label>Email:</label><br>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email ID.." [(ngModel)]="User.email"  required #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+            <small class="text-danger" [class.d-none]="email.valid || email.touched">&nbsp; **Enter a valid email ID</small>
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input type="password" class="form-control" name="password"  placeholder="Enter your password.." [(ngModel)]="User.password" minlength="6" required>
+          </div><br>
+          <input type="submit" value="SIGN IN" class="btn btn-dark" [disabled]="userlogin.form.invalid">
+          <hr>
+              <small>  <a href="/userLogin">Sign In as User</a> </small>
+        </form>
+    </div>
+</div>

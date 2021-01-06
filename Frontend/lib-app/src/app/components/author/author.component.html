@@ -1,0 +1,46 @@
+<div class="masthead">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Authors
+          <p class="lead"></p>
+        </h1>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+    <div class="row" *ngFor = 'let author of authors'>    
+      <br>
+      <div class="col-md-2 col-sm-3 text-center">
+        <a class="story-title" href="#"><img alt="" src="" style="width:100px;height:100px" class="img-circle"></a>
+      </div>
+      <div class="col-md-10 col-sm-9">
+       <h3>{{author.name}}</h3>
+        <div class="row">
+          <div class="col-xs-9">
+            <small style="font-family:courier,'new courier';" class="text-muted">{{author.genre}} •
+                <a href="viewAuthor" class="text-muted" (click)="viewAuthor(author)" >Read More</a></small> <br>    
+                <button class="btn btn-warning" (click)="editAuthor(author)"><i class="fas fa-edit"></i></button>&nbsp; &nbsp;
+                <button class="btn btn-danger" (click)="deleteAuthor(author)"><i class="far fa-trash-alt"></i></button> 
+             <hr>   
+          </div>
+       </div>
+    </div>
+    <hr>
+  </div> 
+</div>
+                                                                                 
+                                              
+                                                
+ </div><!--/col-12-->
+</div>
+</div>
+         
+<hr>

@@ -1,0 +1,24 @@
+.masthead{
+    margin:20px;
+}
+h1{
+    font-family: 'Bad Script', cursive;
+    font-size: 55px;
+    color: white;
+  }
+h3{
+    font-family: 'Bad Script', cursive;
+    margin-left: 10vw;
+    padding-top: 10px;
+}
+ .form-body{
+     background-color: white;
+     margin:auto;
+     width:35vw;
+     height:80vh;
+     padding:15px;
+ } 
+
+ .form-control{
+     width:20vw;
+ }

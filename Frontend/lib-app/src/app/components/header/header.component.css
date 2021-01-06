@@ -1,0 +1,18 @@
+
+
+
+.bg-light {
+    background-color: black !important;
+}
+
+.nav-item a{
+    color: white;
+    font-family:'Oswald',arial narrow,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-item a:hover {
+    background-color: white;
+    color:black;
+  }
