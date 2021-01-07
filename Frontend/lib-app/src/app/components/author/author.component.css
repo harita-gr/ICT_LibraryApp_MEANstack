@@ -216,3 +216,9 @@ h2,h3,.highlight,.navbar a,#masthead h4 {
   i{
     color:black;
   }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}

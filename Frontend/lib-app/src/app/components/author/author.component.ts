@@ -10,11 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
- 
+  userType:string;
   authors:Author[];
   constructor(private _author:AuthorsService,
     private _router:Router
-   ) { }
+   ) {
+    let userType=localStorage.getItem("userType");
+    this.userType=userType;
+    }
 
   ngOnInit(): void {
       this._author.getAuthorsList().subscribe((data)=>{
@@ -41,5 +44,10 @@ export class AuthorComponent implements OnInit {
       })
   
 
+  }
+
+  endAlert(){
+    alert("That's it folks!!");
+    this._router.navigate(['authors']);
   }
 }

@@ -1,0 +1,37 @@
+#masthead h1{
+    font-family: 'Bad Script', cursive;
+    color: white;
+    font-size: 50px;
+    margin-top:50px;
+    line-height: 1;
+  }
+
+  #masthead {
+    min-height:199px;   
+    color:#aaaacc;
+  }
+
+  .panel {
+    border-color:transparent;
+    border-radius:0;
+    width:65vw;
+    margin: auto;
+  }
+
+  .panel-body-home{
+    background-color: #fefefe;
+  }
+  .panel-body-home img{
+    width: 30vw;
+    height:30vw;
+ }
+ .panel-body-home div.ad{
+   margin-left: 20px;
+   
+ }
+ .panel-body-home{
+   display: flex;
+ }
+ 
+ 
+  

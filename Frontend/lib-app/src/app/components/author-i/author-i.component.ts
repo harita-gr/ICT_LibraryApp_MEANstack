@@ -29,6 +29,9 @@ export class AuthorIComponent implements OnInit {
     
   }
 
+  goBack(){
+    this._router.navigate(['authors']);
+  }
 
 
 }

@@ -9,11 +9,15 @@ import { Router } from '@angular/router'
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-
+  userType:string;
   books:Book[];
   constructor(private _book:BooksService,
     private _router:Router
-   ) { }
+   ) {
+
+    let userType=localStorage.getItem("userType");
+    this.userType=userType;
+    }
 
   ngOnInit(): void {
       this._book.getBooksList().subscribe((data)=>{
@@ -38,6 +42,11 @@ export class BookComponent implements OnInit {
         this.books = this.books.filter(p => p !== book);
       })  
 
+  }
+
+  endAlert(){
+    alert("That's it folks!!");
+    this._router.navigate(['books']);
   }
 }
 

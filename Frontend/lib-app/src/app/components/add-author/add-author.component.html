@@ -21,15 +21,15 @@
                 </div>
                 <form (ngSubmit)="addAuthor()">
                <label> Name: </label><br>
-               <input type="text" id="name" placeholder="Enter author name.." class="form-control" name="name" [(ngModel)]="author.name"> 
+               <input type="text" id="name" placeholder="Enter author name.." class="form-control" name="name" [(ngModel)]="author.name" required> 
                <span id="aname_err"></span><br>
                <label> Genre: </label><br>
-               <input type="text" id="genre" placeholder="Enter the genre.." class="form-control" name="genre" [(ngModel)]="author.genre">
+               <input type="text" id="genre" placeholder="Enter the genre.." class="form-control" name="genre" [(ngModel)]="author.genre" required>
                <label> Books: </label><br>
-               <input type="text" id="books" placeholder="Enter books seperated by ','" class="form-control" name="book" [(ngModel)]="author.book">
+               <input type="text" id="books" placeholder="Enter books seperated by ','" class="form-control" name="book" [(ngModel)]="author.book" required>
                <span id="abook_err"></span><br>
                <label> Upload Image: </label><br>
-               <input type="file" id="file" name="image" [(ngModel)]="author.image">
+               <input type="file" id="file" name="image" [(ngModel)]="author.image" required>
                <span id="aimg_err"></span><br> <br>
                <input type="submit" value="Add Author" class="btn btn-dark"> 
               </form>

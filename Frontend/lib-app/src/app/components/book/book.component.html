@@ -27,18 +27,22 @@
                 <h3>{{book.title}}</h3>
                 <div class="row">
                   <div class="col-xs-9">
-                    <h4><span class="label label-default">{{book.author}}</span></h4><h4>
+                    <h4>&nbsp;<span class="label label-default">{{book.author}}</span></h4>
                     <small style="font-family:courier,'new courier';" class="text-muted">{{book.genre}}• 
-                      <a href="viewBook" class="text-muted" (click)="viewBook(book)">Read More</a></small> <hr>
+                      <a href="viewBook" class="text-muted" (click)="viewBook(book)">Read More</a></small>
+                      <div class="editButtons" *ngIf="userType =='admin'">
                       <button class="btn btn-warning" (click)="editBook(book)"><i class="fas fa-edit"></i></button>&nbsp; &nbsp;
-                      <button class="btn btn-danger" (click)="deleteBook(book)"><i class="far fa-trash-alt"></i></button> 
-                    </h4></div>
+                      <button class="btn btn-danger" (click)="deleteBook(book)"><i class="far fa-trash-alt"></i></button>
+                    </div> 
+                    </div>
+                    <hr>
                   <div class="col-xs-3"></div>
                 </div>
                 <br><br>
               </div>
             </div>
+            <a class="btn btn-primary pull-right btnNext" (click)="endAlert()">More <i class="glyphicon glyphicon-chevron-right"></i></a>
             <hr>
-
+            
 
     

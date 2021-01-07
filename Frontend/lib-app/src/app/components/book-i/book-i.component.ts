@@ -28,4 +28,8 @@ export class BookIComponent implements OnInit {
   })
   }
 
+  goBack(){
+    this._router.navigate(['books']);
+  }
+
 }

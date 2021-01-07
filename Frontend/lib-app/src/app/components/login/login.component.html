@@ -14,21 +14,25 @@
         </div>
 
         <div class="card-body">
-            <form class="form col-md-6" #userlogin="ngForm" (ngSubmit)="validateUserLogin()">
+            <form class="form col-md-6" name="userlogin" #userlogin="ngForm" (ngSubmit)="validateUserLogin()">
             <div class="form-group">
               <label>Email:</label><br>
-              <input type="email" class="form-control" name="email" placeholder="Enter your email ID.." [(ngModel)]="User.email"  required #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
-              <small class="text-danger" [class.d-none]="email.valid || email.touched">&nbsp; **Enter a valid email ID</small>
+              <!-- <input type="email" class="form-control" name="email" placeholder="Enter your email ID.." [(ngModel)]="User.email"  required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" > -->
+              <input type="email" class="form-control" name="email" placeholder="Enter your email ID.." [(ngModel)]="User.email"  #email="ngModel" required> 
+              <span ng-show="userlogin.email.$touched && userlogin.email.$invalid">The email is required.</span>
+              <!-- <small class="text-danger" *ngIf="email.invalid">&nbsp; **Enter a valid email ID</small> -->
             </div>
             <div class="form-group">
               <label>Password:</label>
-              <input type="password" class="form-control" name="password"  placeholder="Enter your password.." [(ngModel)]="User.password" minlength="6" required>
+              <input type="password" class="form-control" name="password"  placeholder="Enter your password.." [(ngModel)]="User.password" minlength="6" required #password="ngModel">
+              <!-- <small class="text-danger" *ngIf="password.invalid">&nbsp; **Enter a valid password</small> -->
             </div><br>
             <input type="submit" value="SIGN IN" class="btn btn-dark" [disabled]="userlogin.form.invalid">
             <hr>
             <small> New User? Sign Up <a routerLink="/userRegister"> here</a>! </small>
             <hr>
             <small>  <a routerLink="/adminlogin">Sign In as Admin</a> </small>
+ 
           </form>
       </div>
 </div>

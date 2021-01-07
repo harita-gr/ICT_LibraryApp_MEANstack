@@ -26,6 +26,7 @@ ul.list-inline li{
 }
 h1{
     font-family:'Oswald',arial narrow,sans-serif;
+    color: white;
 }
 
 footer {
@@ -34,13 +35,13 @@ footer {
     padding-bottom: 20px;
     background-color: #cecece;
     bottom: 0;
-    position: absolute;
+    /* position: absolute; */
     width: 100vw;
 }
 
 #footer {
     bottom:150px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
